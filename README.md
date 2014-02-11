@@ -7,7 +7,7 @@ Credits: Lazyink, TheSzerdi, Falcyn , TAWTonic  the devs from the original Missi
 
 Same as EMS-026 only taken out the copied missions , u can sell the vehicles but they wont be there after a restart or save to the database
 
-Install is simple on Epoch-1041
+Install is simple on Epoch-1041   ... unpack your dayz_server.pbo
 
 <b>Edit your server_functions.sqf</b><br>Located: dayz_server\init\server_functions.sqf<br>
 
@@ -42,10 +42,10 @@ Install is simple on Epoch-1041
     };
  
 
-AND NEXT ... Copy the EMS folder into the unpacked server.pbo then Repack and then 
+AND NEXT ... Copy the EMS folder into the unpacked dayz_server.pbo then Repack and then 
 
 Copy the debug folder into your mission-folder
 
-... omg thats it
+... thats it
 
     
