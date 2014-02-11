@@ -8,7 +8,7 @@ Install is simple   on Epoch-1041
 
 <b>Edit your server_functions.sqf</b><br>Located: dayz_server\init\server_functions.sqf<br>
 
-<b>Around line 30 look for this:</b>
+<b>Around line 37 look for this:</b>
 
     server_deaths = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerDeaths.sqf";
 
