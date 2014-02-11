@@ -2,7 +2,8 @@ EMS---0.27
 ==========
 
 This is a followup on the EMS - 0.26 from Fuchs
-_Credits: Lazyink, TheSzerdi, Falcyn , TAWTonic  the devs from the original Missions system
+
+Credits: Lazyink, TheSzerdi, Falcyn , TAWTonic  the devs from the original Missions system
 
 Install is simple   on Epoch-1041
 
