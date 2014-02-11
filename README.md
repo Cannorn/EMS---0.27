@@ -5,7 +5,9 @@ This is a followup on the EMS - 0.26 from Fuchs
 
 Credits: Lazyink, TheSzerdi, Falcyn , TAWTonic  the devs from the original Missions system
 
-Install is simple   on Epoch-1041
+Same as EMS-026 only taken out the copied missions , u can sell the vehicles but they wont be there after a restart or save to the database
+
+Install is simple on Epoch-1041
 
 <b>Edit your server_functions.sqf</b><br>Located: dayz_server\init\server_functions.sqf<br>
 
