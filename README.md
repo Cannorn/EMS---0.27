@@ -42,6 +42,10 @@ Install is simple on Epoch-1041
     };
  
 
-AND NEXT ... Copy the EMS folder into the unpacked server.pbo then Repack and then ... omg thats it
+AND NEXT ... Copy the EMS folder into the unpacked server.pbo then Repack and then 
+
+Copy the debug folder into your mission-folder
+
+... omg thats it
 
     
