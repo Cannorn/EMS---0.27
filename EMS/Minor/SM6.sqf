@@ -1,7 +1,7 @@
-private ["_coords","_wait","_MainMarker75"];
+private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMinor.sqf";
 WaitUntil {MissionGoMinor == 1};
-_coords = [getMarkerPos "center",0,6500,20,0,10,0] call BIS_fnc_findSafePos;
+_coords = [getMarkerPos "center",0,6200,20,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Minor mission created (SM6)";
 
 [nil,nil,rTitleText,"A weapons truck has crashed!", "PLAIN",10] call RE;
@@ -11,8 +11,9 @@ publicVariable "MCoords";
 [] execVM "debug\addmarkers75.sqf";
 
 _uralcrash = createVehicle ["UralWreck",_coords,[], 0, "CAN_COLLIDE"];
-_hummer = createVehicle ["SUV_Camo",[(_coords select 0) + 10, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
-_hummer setVariable ["ObjectID","1",true]; PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
+_veh = createVehicle ["SUV_Camo",[(_coords select 0) + 7, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
+_veh setVariable ["ObjectID","1",true];
+PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
 
 _crate = createVehicle ["USLaunchersBox",[(_coords select 0) + 3, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate] execVM "\z\addons\dayz_server\EMS\misc\fillBoxes.sqf";

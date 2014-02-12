@@ -1,7 +1,7 @@
-private ["_coords","_wait"];
+private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMajor.sqf";
 WaitUntil {MissionGo == 1};
-_coords = [getMarkerPos "center",0,6500,35,0,10,0] call BIS_fnc_findSafePos;
+_coords = [getMarkerPos "center",0,6200,35,0,10,0] call BIS_fnc_findSafePos;
 sleep 1;
 diag_log "EMS: Major mission created (SM2)";
 
@@ -11,17 +11,19 @@ publicVariable "Ccoords";
 [] execVM "debug\addmarkers.sqf";
 
 _c130wreck = createVehicle ["C130J_wreck_EP1",[(_coords select 0) , (_coords select 1)],[], 0, "NONE"];
-_c130wreck setVariable ["ObjectID","1",true]; PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
-_hummer = createVehicle ["SUV_Camo",[(_coords select 0) - 20, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
-_hummer setVariable ["ObjectID","1",true]; PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
+_veh = createVehicle ["SUV_Camo",[(_coords select 0) - 20, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
+_veh setVariable ["ObjectID","1",true];
+PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
+sleep 1;
 
 _crate = createVehicle ["USVehicleBox",[(_coords select 0) - 10, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate] execVM "\z\addons\dayz_server\EMS\misc\fillBoxes.sqf";
 _crate setVariable ["permaloot",true];
-sleep 2;
+sleep 1;
+
 _aispawn = [_coords,60,4,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
 _aispawn = [_coords,40,3,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
-sleep 2;
+sleep 1;
 
 waitUntil{{isPlayer _x && _x distance _c130wreck < 15 } count playableunits > 0}; 
 

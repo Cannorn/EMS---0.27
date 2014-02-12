@@ -1,8 +1,8 @@
-private ["_coords","_wait","_MainMarker75"];
+private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMinor.sqf";
 WaitUntil {MissionGoMinor == 1};
 publicVariable "MissionGoMinor";
-_coords =  [getMarkerPos "center",0,6500,20,0,10,0] call BIS_fnc_findSafePos;
+_coords =  [getMarkerPos "center",0,6200,20,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Minor mission created (SM3)";
 
 [nil,nil,rTitleText,"Bandits have set up a stash house!", "PLAIN",10] call RE;
@@ -12,8 +12,9 @@ publicVariable "MCoords";
 [] execVM "debug\addmarkers75.sqf";
 
 _baserunover = createVehicle ["Land_HouseV_1I3",[(_coords select 0) + 2, (_coords select 1) + 5,-0.3],[], 0, "CAN_COLLIDE"];
-_hummer = createVehicle ["SUV_Camo",[(_coords select 0) + 25, (_coords select 1) - 15,0],[], 0, "CAN_COLLIDE"];
-_hummer setVariable ["ObjectID","1",true]; PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
+_veh = createVehicle ["SUV_Camo",[(_coords select 0) + 15, (_coords select 1) - 10,0],[], 0, "CAN_COLLIDE"];
+_veh setVariable ["ObjectID","1",true];
+PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
 
 _crate = createVehicle ["USVehicleBox",[(_coords select 0) - 3, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate] execVM "\z\addons\dayz_server\EMS\misc\fillBoxes.sqf";

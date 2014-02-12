@@ -1,7 +1,7 @@
-private ["_coords","_wait"];
+private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMajor.sqf";
 WaitUntil {MissionGo == 1};
-_coords = [getMarkerPos "center",0,6500,20,0,10,0] call BIS_fnc_findSafePos;
+_coords = [getMarkerPos "center",0,6200,20,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Major Mission Created (SM5)";
 
 [nil,nil,rTitleText,"A Ural carrying supplies crashed!", "PLAIN",10] call RE;
@@ -10,8 +10,10 @@ publicVariable "Ccoords";
 [] execVM "debug\addmarkers.sqf";
 
 _uralcrash = createVehicle ["UralWreck",[(_coords select 0) - 1, _coords select 1,0],[], 0, "CAN_COLLIDE"];
-_hummer = createVehicle ["HMMWV_DZ",[(_coords select 0) + 30, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
-_hummer setVariable ["ObjectID","1",true]; PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
+_veh = createVehicle ["HMMWV_DZ",[(_coords select 0) + 10, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
+_veh setVariable ["ObjectID","1",true];
+PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
+sleep 1;
 
 _crate = createVehicle ["USVehicleBox",[(_coords select 0) - 6, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate] execVM "\z\addons\dayz_server\EMS\misc\fillBoxes.sqf";
