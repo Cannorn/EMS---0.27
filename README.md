@@ -46,6 +46,11 @@ AND NEXT ... Copy the EMS folder into the unpacked dayz_server.pbo then Repack a
 
 Copy the debug folder into your mission-folder
 
+and add this in init.sqf
+
+    [] execVM "debug\addmarkers.sqf";
+    [] execVM "debug\addmarkers75.sqf";
+
 ... thats it
 
     
