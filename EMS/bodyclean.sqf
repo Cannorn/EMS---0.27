@@ -3,7 +3,7 @@ _ai_type = typeof _ai;
 
 _aikiller = _this select 1;
 _aikiller_name = name _aikiller;
-_humanityBoost = 50;
+_humanityBoost = 25;
 
 _humanity = _aikiller getVariable ["humanity",0];
 _humanity = _humanity + _humanityBoost;

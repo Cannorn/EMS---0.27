@@ -2,7 +2,7 @@ private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMinor.sqf";
 WaitUntil {MissionGoMinor == 1};
 
-_coords = [getMarkerPos "center",0,6200,20,0,10,0] call BIS_fnc_findSafePos;
+_coords = [getMarkerPos "center",0,6000,20,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Minor mission created (SM1)";
 [nil,nil,rTitleText,"A hunting party has been spotted!", "PLAIN",10] call RE;
 
@@ -14,9 +14,8 @@ _veh = createVehicle ["UAZ_Unarmed_UN_EP1",[(_coords select 0) + 5, (_coords sel
 _veh setVariable ["ObjectID","1",true];
 PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
 
-[_coords,60,4,2,1] execVM "\z\addons\dayz_server\EMS\add_unit_server2.sqf";
-[_coords,40,3,2,1] execVM "\z\addons\dayz_server\EMS\add_unit_server2.sqf";
-sleep 2;
+[_coords,60,4,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server2.sqf";
+[_coords,40,3,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server2.sqf";
 
 waitUntil{({alive _x} count (units SniperTeam)) < 1};
 

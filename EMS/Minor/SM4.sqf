@@ -1,7 +1,7 @@
 private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMinor.sqf";
 WaitUntil {MissionGoMinor == 1};
-_coords =  [getMarkerPos "center",0,6200,20,0,10,0] call BIS_fnc_findSafePos;
+_coords =  [getMarkerPos "center",0,6000,25,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Minor mission created (SM4)";
 
 [nil,nil,rTitleText,"A helicopter has crashed!", "PLAIN",10] call RE;
@@ -19,9 +19,8 @@ _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6, _coords select
 [_crate] execVM "\z\addons\dayz_server\EMS\misc\fillBoxesS.sqf";
 _crate setVariable ["permaLoot",true];
 
-[_coords,40,3,2,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
-[_coords,60,4,2,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
-sleep 2;
+[_coords,40,3,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
+[_coords,60,4,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
 
 waitUntil{{isPlayer _x && _x distance _chopcrash < 10 } count playableunits > 0}; 
 

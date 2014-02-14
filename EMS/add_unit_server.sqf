@@ -121,21 +121,19 @@ private ["_aiunit","_xpos","_ypos","_unitpos","_aiGroup","_wppos","_wpradius","_
         _aiunit addMagazine "ItemSodaCoke";
         _aiunit addMagazine "ItemPainkiller";
         _aiunit addMagazine "ItemHeatPack";
-        _aiunit addMagazine "ItemEpinephrine";
-        _aiunit addMagazine "ItemMorphine";
         };
         if (x == 2) then {
         _aiunit addMagazine "ItemHeatPack";
         _aiunit addMagazine "ItemPainkiller";
-        _aiunit addMagazine "ItemEpinephrine";
         _aiunit addMagazine "ItemMorphine";
         };
         if (x >= 3) then {
         _aiunit addMagazine "ItemHeatPack";
         _aiunit addMagazine "ItemBandage";
+        _aiunit addMagazine "ItemMorphine";		
         };
-        _aiunit setSkill ["aimingAccuracy",0.8];
-        _aiunit setSkill ["aimingShake",0.7];
+        _aiunit setSkill ["aimingAccuracy",0.9];
+        _aiunit setSkill ["aimingShake",0.5];
         _aiunit setSkill ["aimingSpeed",0.8];
         _aiunit setSkill ["endurance",0.9];
         _aiunit setSkill ["spotDistance",0.8];

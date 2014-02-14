@@ -1,7 +1,7 @@
 private ["_coords","_base","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMajor.sqf";
 WaitUntil {MissionGo == 1};
-_coords = [getMarkerPos "center",0,6300,25,0,10,0] call BIS_fnc_findSafePos;
+_coords = [getMarkerPos "center",0,6000,30,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Major Mission Created (SM8)";
 
 [nil,nil,rTitleText,"A base is being constructed!", "PLAIN",6] call RE;
@@ -23,6 +23,7 @@ _crate setVariable ["permaLoot",true];
 sleep 1;
 
 _aispawn = [_coords,60,4,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
+_aispawn = [_coords,60,4,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server2.sqf";
 _aispawn = [_coords,40,3,4,1] execVM "\z\addons\dayz_server\EMS\add_unit_server.sqf";
 sleep 1;
 

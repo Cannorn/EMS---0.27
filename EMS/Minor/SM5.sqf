@@ -1,7 +1,7 @@
 private ["_coords","_veh"];
 [] execVM "\z\addons\dayz_server\EMS\SMGoMinor.sqf";
 WaitUntil {MissionGoMinor == 1};
-_coords =  [getMarkerPos "center",0,6200,10,0,10,0] call BIS_fnc_findSafePos;
+_coords =  [getMarkerPos "center",0,6000,10,0,10,0] call BIS_fnc_findSafePos;
 diag_log "EMS: Minor mission created (SM5)";
 
 [nil,nil,rTitleText,"A Humvee has crashed!", "PLAIN",10] call RE;
