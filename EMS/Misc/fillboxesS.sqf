@@ -1,20 +1,19 @@
-_crate2 = _this select 0;
-clearWeaponCargoGlobal _crate2;
-clearMagazineCargoGlobal _crate2;
+_crate = _this select 0;
+clearWeaponCargoGlobal _crate;
+clearMagazineCargoGlobal _crate;
 
-_crate2 addWeaponCargoGlobal ["M4A1_RCO_GL", 1];
-_crate2 addWeaponCargoGlobal ["M16A4_GL", 1];
-_crate2 addWeaponCargoGlobal ["M4A3_CCO_EP1", 1];
-_crate2 addWeaponCargoGlobal ["M4SPR", 1];
-_crate2 addWeaponCargoGlobal ["SVD", 1];
+_crate addWeaponCargoGlobal ["M4A3_CCO_EP1", 1];
+_crate addWeaponCargoGlobal ["M4SPR", 1];
+_crate addWeaponCargoGlobal ["M24_des_EP1", 1];
+_crate addWeaponCargoGlobal ["SVD_CAMO", 1];
 
-_crate2 addWeaponCargoGlobal ["glock17_EP1", 1];
-_crate2 addWeaponCargoGlobal ["MakarovSD", 1];
+_crate addWeaponCargoGlobal ["glock17_EP1", 1];
+_crate addWeaponCargoGlobal ["MakarovSD", 1];
 
-_crate2 addMagazineCargoGlobal ["10x_303", 10];
-_crate2 addMagazineCargoGlobal ["17Rnd_9x19_glock17", 10];
-_crate2 addMagazineCargoGlobal ["8Rnd_9x18_MakarovSD", 10];
-_crate2 addMagazineCargoGlobal ["30Rnd_556x45_Stanag", 10];
-_crate2 addMagazineCargoGlobal ["10Rnd_762x54_SVD", 10];
+_crate addMagazineCargoGlobal ["5Rnd_762x51_M24", 10];
+_crate addMagazineCargoGlobal ["17Rnd_9x19_glock17", 5];
+_crate addMagazineCargoGlobal ["8Rnd_9x18_MakarovSD", 10];
+_crate addMagazineCargoGlobal ["30Rnd_556x45_Stanag", 5];
+_crate addMagazineCargoGlobal ["10Rnd_762x54_SVD", 5];
 
-_crate2 addBackpackCargoGlobal ['DZ_Backpack_EP1', 1];
+_crate addBackpackCargoGlobal ['DZ_Backpack_EP1', 1];
